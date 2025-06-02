@@ -3,16 +3,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 import nltk
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt')
-
 import os
 from summarize_mmr import summarize_mmr
 
 # Download NLTK punkt if not already
 nltk.download('punkt')
+nltk.download('punkt_tab')
 
 # --- CONFIG ---
 st.set_page_config(page_title="News Summarization App", layout="wide")
