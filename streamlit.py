@@ -16,7 +16,7 @@ st.set_page_config(page_title="News Summarization App", layout="wide")
 @st.cache_data
 
 def load_data():
-    df = pd.read_csv("dataset_artikel_final.csv", index_col=0)
+    df = pd.read_csv("dataset/dataset_artikel_final.csv", index_col=0)
     df['Text'] = df['Text'].str.strip('\'"')
     df = df.dropna()
     return df
